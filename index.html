@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فست فود لاویسان</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>🍔 فست فود لاویسان</h1>
+                <p>بهترین غذای فست فود در شهر</p>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </header>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterMenu('all')">همه</button>
+            <button class="filter-btn" onclick="filterMenu('burger')">برگر</button>
+            <button class="filter-btn" onclick="filterMenu('pizza')">پیتزا</button>
+            <button class="filter-btn" onclick="filterMenu('sandwich')">ساندویچ</button>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="menu-container" id="menuContainer">
+            <!-- Items will be loaded here by JavaScript -->
+        </div>
+
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h2>سبد خرید</h2>
+                <button class="close-btn" onclick="toggleCart()">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">سبد خرید خالی است</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>جمع کل:</strong>
+                    <span id="totalPrice">0</span> تومان
+                </div>
+                <button class="checkout-btn" onclick="checkout()">سفارش دهید</button>
+            </div>
+        </div>
+
+        <!-- Overlay for Cart -->
+        <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
